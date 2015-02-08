@@ -1,0 +1,35 @@
+﻿@model List<Evaluator.Models.User>
+
+@{
+    ViewBag.Title = "Orth";
+}
+
+<h1>List of Users</h1>
+<div class="float-left">
+<div>
+<table>
+    <tr>
+        <td class="float-center"><b>UID</b></td>
+        <td class="float-center"><b>Name</b></td>
+        <td class="float-center"><b>Password</b></td>
+        <td class="float-center"><b>Update</b></td>
+        <td class="float-center"><b>Delete</b></td>
+    </tr>
+    @foreach (var u in Model)
+    { 
+        <tr>
+            <td >@u.Id</td>
+            <td >@u.Name</td>
+            <td >@u.Password</td>
+            <td>
+                <a href="~/Account/Update/@u.Id">Edit</a>
+
+            </td>
+            <td>
+                <a href="/Account/Delete/@u.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+</div>
+</div>

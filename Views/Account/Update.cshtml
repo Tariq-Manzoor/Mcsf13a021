@@ -1,0 +1,12 @@
+﻿@model Evaluator.Models.User
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+<form action="/Account/UpdateConfirm/@Model.Id" method="post">
+    Name <input type="text"  value="@Model.Name" name="t1"/>
+    Password <input type="text"  value="@Model.Password" name="p1"/>
+    <input type="submit" value="Update User"/>
+</form>

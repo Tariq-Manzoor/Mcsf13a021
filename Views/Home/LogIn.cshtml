@@ -1,0 +1,45 @@
+@model Evaluator.Models.User
+
+<form action="/Home/AuthenticateUser" method="post">
+    <fieldset>
+       <legend>LOGIN Form</legend>
+            <div>
+                <label for="UserName">User name</label>
+                <input  id="UserName" name="UserName" type="text" value="name" />
+            </div>
+            <div>
+                <label for="Password">Password</label>
+                <input id="Password" name="Password" type="password"  />
+            </div>
+           
+        <div>
+            <input type="submit" value="login" /> <u>@Html.ActionLink("signup","SignUp","Home")</u>
+            <u>@Html.ActionLink("User","UserValidation","UserValidation")</u>
+        </div>
+    </fieldset>
+</form>
+ <div>
+     For user list @Html.ActionLink("Click Here","Orth","Account")
+ </div>
+@*@using (Html.BeginForm("AuthenticateUser","Home",FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Name)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m=>m.Name)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(k => k.Password)
+    </div>
+        <div class="editor-field">
+            @Html.EditorFor(k=> k.Password, "password")
+        </div>
+        
+        <p>
+            <input type="submit" value="Submit" /> <u>@Html.ActionLink("signup","SignUp","Home")</u>
+        </p>    
+}*@

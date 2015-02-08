@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/layout.css" type="text/css" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+ <div class="wrapper col1">
+
+                <div class="float-right">
+                    <p>&copy; @DateTime.Now.DayOfWeek @DateTime.Now.Day-@DateTime.Now.Month-@DateTime.Now.Year ; Time @DateTime.Now.Hour:@DateTime.Now.Minute
+                         - My First MVC Production</p>
+                </div>
+  <div id="topbar" >
+    <p>Tel: 0092-xxxxxxxxxx | Mail: www.dawateislami.net</p>
+    <ul>
+      <li>@Html.ActionLink("Login", "LogIn", "Home")</li>
+      <li>@Html.ActionLink("SignUp", "SignUp", "Home")</li>
+      <li>@Html.ActionLink("AboutUs", "AboutUs", "Home")</li>
+      <li>@Html.ActionLink("ContactUs", "ContactUs", "Home")</li>
+    </ul>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+  <div id="header">
+    
+      <h1>Self Evaluator</h1>
+    
+    <div class="fl_center"> <a href="#"><img src="~/Images/logo.png" alt="" /></a> </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="topnav">
+      <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("Daily", "Daily", "Home")</li>
+        <li>@Html.ActionLink("Weekly", "Weekly", "Home")</li>
+        <li>@Html.ActionLink("Monthly", "Monthly", "Home")</li>
+        <li>@Html.ActionLink("Yearly", "Yearly", "Home")</li>
+        <li>@Html.ActionLink("Status", "Status", "Home")</li>
+      </ul>
+  </div>
+</div>
+    <div>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    </div>
+</body>
+</html>
